@@ -32,9 +32,8 @@ nav .navbar{
   padding: 0 50px;
 }
 .navbar .logo a img{
-  width: 30px;
-  text-decoration: none;
-  font-weight: 600;
+  width: 10vh;
+  border-radius: 30px;
 }
 nav .navbar .nav-links{
   line-height: 70px;
@@ -119,7 +118,6 @@ nav .navbar .links li:hover .js-sub-menu{
   position: relative;
    height: 40px;
   width: 40px;
-  color: #000000;
 }
 .navbar .search-box i{
   position: absolute;
