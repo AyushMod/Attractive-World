@@ -124,10 +124,8 @@ nav .navbar .links li:hover .js-sub-menu{
   position: absolute;
   height: 100%;
   width: 100%;
+  color: #000000;
   line-height: 40px;
-  text-align: center;
-  font-size: 22px;
-  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
 }
