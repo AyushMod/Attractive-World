@@ -32,7 +32,7 @@ nav .navbar{
   padding: 0 50px;
 }
 .navbar .logo a img{
-  width: 10vh;
+  width: 20vh;
   border-radius: 30px;
 }
 nav .navbar .nav-links{
@@ -118,6 +118,7 @@ nav .navbar .links li:hover .js-sub-menu{
   position: relative;
    height: 40px;
   width: 40px;
+  color: #000000;
 }
 .navbar .search-box i{
   position: absolute;
@@ -126,7 +127,6 @@ nav .navbar .links li:hover .js-sub-menu{
   line-height: 40px;
   text-align: center;
   font-size: 22px;
-  color: #000000;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
