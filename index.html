@@ -1,355 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
     <title>Homepage | Attractive World</title>
-    <meta name="description" content="Welcome to https://dhwani-channel.vercel.app/"
-    />
-    <meta name="keywords" content="Our goal is to keep you all happy, motivated and get sucess in your life." />
-    <link rel="canonical" href="description.html" />
-    <meta name="robots" content="noindex, nofollow" />
-
-    <link rel="icon" href="Add a subheading.png" type="image/jpeg" />
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="A.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="apple-mobile-web-app-title" content="Attractive World">
 <meta name="application-name" content="Attractive World">
-<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileColor" content="#00bdff">
 <meta name="msapplication-TileImage" content="/mstile-144x144.png">
 <meta name="theme-color" content="#ffffff">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script>
-
-      window.OneSignal = window.OneSignal || [];
-
-      OneSignal.push( function() {
-        OneSignal.SERVICE_WORKER_UPDATER_PATH = 'OneSignalSDKUpdaterWorker.js';
-                      OneSignal.SERVICE_WORKER_PATH = 'OneSignalSDKWorker.js';
-                      OneSignal.SERVICE_WORKER_PARAM = { scope: '/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/push/onesignal/' };
-        OneSignal.setDefaultNotificationUrl("https://attractive-world.vercel.app");
-        var oneSignal_options = {};
-        window._oneSignalInitOptions = oneSignal_options;
-
-        oneSignal_options['wordpress'] = true;
-oneSignal_options['appId'] = '1d01c84d-aa78-422e-8277-861e6a59e9b7';
-oneSignal_options['allowLocalhostAsSecureOrigin'] = true;
-oneSignal_options['welcomeNotification'] = { };
-oneSignal_options['welcomeNotification']['title'] = "";
-oneSignal_options['welcomeNotification']['message'] = "";
-oneSignal_options['path'] = "https://attractive-world.vercel.app/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/";
-oneSignal_options['promptOptions'] = { };
-oneSignal_options['promptOptions']['actionMessage'] = "We'd like to send you notifications of the latest posts and updates.";
-oneSignal_options['notifyButton'] = { };
-oneSignal_options['notifyButton']['enable'] = true;
-oneSignal_options['notifyButton']['position'] = 'bottom-left';
-oneSignal_options['notifyButton']['theme'] = 'default';
-oneSignal_options['notifyButton']['size'] = 'small';
-oneSignal_options['notifyButton']['showCredit'] = true;
-oneSignal_options['notifyButton']['text'] = {};
-                OneSignal.init(window._oneSignalInitOptions);
-                      });
-
-      function documentInitOneSignal() {
-        var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
-
-        var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
-          oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
-      }
-
-      if (document.readyState === 'complete') {
-           documentInitOneSignal();
-      }
-      else {
-           window.addEventListener("load", function(event){
-               documentInitOneSignal();
-          });
-      }
-    </script>
-
-<script>
-
-
-
-	    var tdBlocksArray = []; //here we store all the items for the current page
-
-	    //td_block class - each ajax block uses a object of this class for requests
-	    function tdBlock() {
-		    this.id = '';
-		    this.block_type = 1; //block type id (1-234 etc)
-		    this.atts = '';
-		    this.td_column_number = '';
-		    this.td_current_page = 1; //
-		    this.post_count = 0; //from wp
-		    this.found_posts = 0; //from wp
-		    this.max_num_pages = 0; //from wp
-		    this.td_filter_value = ''; //current live filter value
-		    this.is_ajax_running = false;
-		    this.td_user_action = ''; // load more or infinite loader (used by the animation)
-		    this.header_color = '';
-		    this.ajax_pagination_infinite_stop = ''; //show load more at page x
-	    }
-
-
-        // td_js_generator - mini detector
-        (function(){
-            var htmlTag = document.getElementsByTagName("html")[0];
-
-	        if ( navigator.userAgent.indexOf("MSIE 10.0") > -1 ) {
-                htmlTag.className += ' ie10';
-            }
-
-            if ( !!navigator.userAgent.match(/Trident.*rv\:11\./) ) {
-                htmlTag.className += ' ie11';
-            }
-
-	        if ( navigator.userAgent.indexOf("Edge") > -1 ) {
-                htmlTag.className += ' ieEdge';
-            }
-
-            if ( /(iPad|iPhone|iPod)/g.test(navigator.userAgent) ) {
-                htmlTag.className += ' td-md-is-ios';
-            }
-
-            var user_agent = navigator.userAgent.toLowerCase();
-            if ( user_agent.indexOf("android") > -1 ) {
-                htmlTag.className += ' td-md-is-android';
-            }
-
-            if ( -1 !== navigator.userAgent.indexOf('Mac OS X')  ) {
-                htmlTag.className += ' td-md-is-os-x';
-            }
-
-            if ( /chrom(e|ium)/.test(navigator.userAgent.toLowerCase()) ) {
-               htmlTag.className += ' td-md-is-chrome';
-            }
-
-            if ( -1 !== navigator.userAgent.indexOf('Firefox') ) {
-                htmlTag.className += ' td-md-is-firefox';
-            }
-
-            if ( -1 !== navigator.userAgent.indexOf('Safari') && -1 === navigator.userAgent.indexOf('Chrome') ) {
-                htmlTag.className += ' td-md-is-safari';
-            }
-
-            if( -1 !== navigator.userAgent.indexOf('IEMobile') ){
-                htmlTag.className += ' td-md-is-iemobile';
-            }
-
-        })();
-
-
-
-
-        var tdLocalCache = {};
-
-        ( function () {
-            "use strict";
-
-            tdLocalCache = {
-                data: {},
-                remove: function (resource_id) {
-                    delete tdLocalCache.data[resource_id];
-                },
-                exist: function (resource_id) {
-                    return tdLocalCache.data.hasOwnProperty(resource_id) && tdLocalCache.data[resource_id] !== null;
-                },
-                get: function (resource_id) {
-                    return tdLocalCache.data[resource_id];
-                },
-                set: function (resource_id, cachedData) {
-                    tdLocalCache.remove(resource_id);
-                    tdLocalCache.data[resource_id] = cachedData;
-                }
-            };
-        })();
-
-
-
-var td_viewport_interval_list=[{"limitBottom":767,"sidebarWidth":228},{"limitBottom":1018,"sidebarWidth":300},{"limitBottom":1140,"sidebarWidth":324}];
-var td_animation_stack_effect="type0";
-var tds_animation_stack=true;
-var td_animation_stack_specific_selectors=".entry-thumb, img, .td-lazy-img";
-var td_animation_stack_general_selectors=".td-animation-stack img, .td-animation-stack .entry-thumb, .post img, .td-animation-stack .td-lazy-img";
-var tds_general_modal_image="yes";
-var tdc_is_installed="yes";
-var td_ajax_url="https:\/\/attractive-world.vercel.app\/wp-admin\/admin-ajax.php?td_theme_name=Newspaper&v=11.3.1";
-var td_get_template_directory_uri="https:\/\/attractive-world.vercel.app\/wp-content\/plugins\/td-composer\/legacy\/common";
-var tds_snap_menu="snap";
-var tds_logo_on_sticky="show_header_logo";
-var tds_header_style="";
-var td_please_wait="Please wait...";
-var td_email_user_pass_incorrect="User or password incorrect!";
-var td_email_user_incorrect="Email or username incorrect!";
-var td_email_incorrect="Email incorrect!";
-var tds_more_articles_on_post_enable="";
-var tds_more_articles_on_post_time_to_wait="";
-var tds_more_articles_on_post_pages_distance_from_top=0;
-var tds_theme_color_site_wide="#4db2ec";
-var tds_smart_sidebar="enabled";
-var tdThemeName="Newspaper";
-var td_magnific_popup_translation_tPrev="Previous (Left arrow key)";
-var td_magnific_popup_translation_tNext="Next (Right arrow key)";
-var td_magnific_popup_translation_tCounter="%curr% of %total%";
-var td_magnific_popup_translation_ajax_tError="The content from %url% could not be loaded.";
-var td_magnific_popup_translation_image_tError="The image #%curr% could not be loaded.";
-var tdBlockNonce="927888feae";
-var tdDateNamesI18n={"month_names":["January","February","March","April","May","June","July","August","September","October","November","December"],"month_names_short":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"day_names":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"day_names_short":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]};
-var td_ad_background_click_link="";
-var td_ad_background_click_target="";
-</script>
-<style>
-
-</style>
-<style>
-.ai-viewports                 {--ai: 1;}
-.ai-viewport-3                { display: none !important;}
-.ai-viewport-2                { display: none !important;}
-.ai-viewport-1                { display: inherit !important;}
-.ai-viewport-0                { display: none !important;}
-@media (min-width: 768px) and (max-width: 979px) {
-.ai-viewport-1                { display: none !important;}
-.ai-viewport-2                { display: inherit !important;}
-}
-@media (max-width: 767px) {
-.ai-viewport-1                { display: none !important;}
-.ai-viewport-3                { display: inherit !important;}
-}
-</style>
-<style id="tdw-css-placeholder">body::-webkit-scrollbar {
-  width: 16px;
-}
-body::-webkit-scrollbar-track {
-  background: #ffffff;
-}
-body::-webkit-scrollbar-thumb {
-  background: #888;
-  border: 4px solid #ffffff;
-  border-radius: 8px;
-  transition: background 0.2s linear;
-}
-body::-webkit-scrollbar-thumb:hover {
-  background: #a6a6a6;
-}
-.comment-form-input-wrap textarea,
-form .wpcf7-form-control-wrap textarea {
-  min-width: 100%;
-  max-height: 300px;
-}
-</style><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><script>
-/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
-(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
-var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}
-return function(){return ret}})();rp.bindMediaToggle=function(link){var finalMedia=link.media||"all";function enableStylesheet(){link.media=finalMedia}
-if(link.addEventListener){link.addEventListener("load",enableStylesheet)}else if(link.attachEvent){link.attachEvent("onload",enableStylesheet)}
-setTimeout(function(){link.rel="stylesheet";link.media="only x"});setTimeout(enableStylesheet,3000)};rp.poly=function(){if(rp.support()){return}
-var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i++){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"&&!link.getAttribute("data-loadcss")){link.setAttribute("data-loadcss",!0);rp.bindMediaToggle(link)}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}
-if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}
-else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this))
-</script>
   </head>
-<body>
-<nav>
-    <div class="navbar">
-      <i class='bx bx-menu'></i>
-	    <div class="logo"><a href="index.html"><img src="Add a subheading.png"></a></div>
-      <div class="nav-links">
-        <div class="sidebar-logo">
-          <span class="logo-name"><img src="Add a subheading.png"></span>
-          <i class='bx bx-x' ></i>
-        </div>
-        <ul class="links">
-          <li><a href="#">HOME</a></li>
-          <li>
-            <a href="#">HTML & CSS</a>
-            <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
-            <ul class="htmlCss-sub-menu sub-menu">
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">Login Forms</a></li>
-              <li><a href="#">Card Design</a></li>
-              <li class="more">
-                <span><a href="#">More</a>
-                <i class='bx bxs-chevron-right arrow more-arrow'></i>
-              </span>
-                <ul class="more-sub-menu sub-menu">
-                  <li><a href="#">Neumorphism</a></li>
-                  <li><a href="#">Pre-loader</a></li>
-                  <li><a href="#">Glassmorphism</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">JAVASCRIPT</a>
-            <i class='bx bxs-chevron-down js-arrow arrow '></i>
-            <ul class="js-sub-menu sub-menu">
-              <li><a href="#">Dynamic Clock</a></li>
-              <li><a href="#">Form Validation</a></li>
-              <li><a href="#">Card Slider</a></li>
-              <li><a href="#">Complete Website</a></li>
-            </ul>
-          </li>
-          <li><a href="#">ABOUT US</a></li>
-          <li><a href="#">CONTACT US</a></li>
-        </ul>
-      </div>
-      <div class="search-box">
-        <i class='bx bx-search'></i>
-        <div class="input-box">
-          <input type="text" placeholder="Search...">
-        </div>
+  <body>
+    <nav>
+      <div class="logo">Attractive World</div>
+      <label for="btn" class="icon">
+        <span class="fa fa-bars"></span>
+      </label>
+      <input type="checkbox" id="btn">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li>
+          <label for="btn-1" class="show">Features +</label>
+          <a href="#">Features</a>
+          <input type="checkbox" id="btn-1">
+          <ul>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Elements</a></li>
+            <li><a href="#">Icons</a></li>
+          </ul>
+        </li>
+        <li>
+          <label for="btn-2" class="show">Services +</label>
+          <a href="#">Services</a>
+          <input type="checkbox" id="btn-2">
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">App Design</a></li>
+            <li>
+              <label for="btn-3" class="show">More +</label>
+              <a href="#">More <span class="fa fa-plus"></span></a>
+              <input type="checkbox" id="btn-3">
+              <ul>
+                <li><a href="#">Submenu-1</a></li>
+                <li><a href="#">Submenu-2</a></li>
+                <li><a href="#">Submenu-3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="content1">
+      <div class="text">Fully Responsive Footer Section</div>
+      <div class="p">HTML and CSS (Flexbox)
       </div>
     </div>
-  </nav>
-  <link rel="stylesheet" href="style.css">
-  <script>
-let navbar = document.querySelector(".navbar");
-let searchBox = document.querySelector(".search-box .bx-search");
-searchBox.addEventListener("click", ()=>{
-  navbar.classList.toggle("showInput");
-  if(navbar.classList.contains("showInput")){
-    searchBox.classList.replace("bx-search" ,"bx-x");
-  }else {
-    searchBox.classList.replace("bx-x" ,"bx-search");
-  }
-});
-
-let navLinks = document.querySelector(".nav-links");
-let menuOpenBtn = document.querySelector(".navbar .bx-menu");
-let menuCloseBtn = document.querySelector(".nav-links .bx-x");
-menuOpenBtn.onclick = function() {
-navLinks.style.left = "0";
-}
-menuCloseBtn.onclick = function() {
-navLinks.style.left = "-100%";
-}
-
-
-let htmlcssArrow = document.querySelector(".htmlcss-arrow");
-htmlcssArrow.onclick = function() {
- navLinks.classList.toggle("show1");
-}
-let moreArrow = document.querySelector(".more-arrow");
-moreArrow.onclick = function() {
- navLinks.classList.toggle("show2");
-}
-let jsArrow = document.querySelector(".js-arrow");
-jsArrow.onclick = function() {
- navLinks.classList.toggle("show3");
-}
-
-  </script>
-</body>
+    <script>
+      $('.icon').click(function(){
+        $('span').toggleClass("cancel");
+      });
+    </script>
+  </body>
 </html>
