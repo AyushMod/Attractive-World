@@ -14,16 +14,26 @@
 <meta name="application-name" content="Attractive World">
 <meta name="msapplication-TileColor" content="#00bdff">
 <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-<meta name="theme-color" content="#ffffff">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.googleapis.com"><div class='onesignal-customlink-container'></div>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "f8ef0526-f53e-4cec-818d-1c849f0141d7",
+    });
+  });
+</script>
   </head>
   <body>
     <nav>
       <div class="logo">Attractive World</div>
-      <label for="btn" class="icon">
+      <label for="button" class="icon">
         <span class="fa fa-bars"></span>
       </label>
       <input type="checkbox" id="btn">
@@ -60,6 +70,7 @@
         </li>
         <li><a href="#">Portfolio</a></li>
         <li><a href="#">Contact</a></li>
+
       </ul>
     </nav>
     <div class="content1">
